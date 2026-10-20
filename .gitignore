@@ -1,15 +1,33 @@
 # Local environment configuration and secrets
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+!.env.sample
+!.env.template
 
 # Build output
-/target/
 /build/
 /.gradle/
+/target/
+/out/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
 
-# IDE and operating system files
+# Logs and crash dumps
+*.log
+hs_err_pid*
+replay_pid*
+
+# IDE and editor files
 .idea/
 .vscode/
-.DS_Store
 *.iml
+.classpath
+.project
+.settings/
+bin/
+
+# OS files
+.DS_Store
+Thumbs.db
