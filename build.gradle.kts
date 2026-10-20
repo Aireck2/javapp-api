@@ -1,10 +1,11 @@
 plugins {
     java
     id("org.springframework.boot") version "4.1.1"
+    id("com.diffplug.spotless") version "8.10.4"
 }
 
 group = "com.aireck"
-version = "0.1.0-SNAPSHOT"
+version = "0.1.0"
 
 java {
     toolchain {
@@ -26,4 +27,10 @@ dependencies {
 
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
+}
+
+spotless {
+    java {
+        googleJavaFormat("1.36.0")
+    }
 }
